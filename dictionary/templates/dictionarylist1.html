@@ -1,0 +1,11 @@
+{% extends "dictionary.html" %}
+{% block x %}
+
+    <p> {{ count }} words that start with {{ given_word }} </p>
+    <ul>
+        {% for letter in alpha %}
+        <li><a href="{{ url_for('dictionary', given_word=given_word + letter) }}">{{given_word}}{{letter}}</a></li>
+        {% endfor %}
+    </ul> 
+
+{% endblock %}

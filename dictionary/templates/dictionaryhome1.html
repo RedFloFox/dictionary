@@ -1,0 +1,14 @@
+{% extends "dictionary.html" %}
+{% block x %}
+
+<p>Choose a letter!</p>
+    <ul>
+    {% for letter in alpha %}
+        <li>
+            <a href="{{ url_for('dictionary', given_word=letter) }}">{{ letter }}</a>
+        </li>
+    {% endfor %}
+    </ul>   
+        
+
+{% endblock %}
